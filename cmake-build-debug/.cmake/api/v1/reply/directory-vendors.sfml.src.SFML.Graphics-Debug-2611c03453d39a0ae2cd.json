@@ -1,0 +1,66 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install",
+			"sfml_add_library"
+		],
+		"files" : 
+		[
+			"vendors/sfml/cmake/Macros.cmake",
+			"vendors/sfml/src/SFML/Graphics/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 93,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 161,
+				"parent" : 1
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 2,
+			"component" : "devel",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"vendors/sfml/lib/libsfml-graphics-d.a"
+			],
+			"targetId" : "sfml-graphics::@a1fb3181e3cb21f323f1",
+			"targetIndex" : 1,
+			"targetIsImportLibrary" : true,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "bin",
+			"destination" : "bin",
+			"paths" : 
+			[
+				"bin/sfml-graphics-d-2.dll"
+			],
+			"targetId" : "sfml-graphics::@a1fb3181e3cb21f323f1",
+			"targetIndex" : 1,
+			"type" : "target"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "vendors/sfml/src/SFML/Graphics",
+		"source" : "vendors/sfml/src/SFML/Graphics"
+	}
+}

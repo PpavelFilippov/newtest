@@ -15,7 +15,7 @@ add_subdirectory(vendors/sfml/)
 
 # Collect all the source and header files
 file(GLOB ALL_SOURCE_FILES src/*.cpp)
-file(GLOB ALL_HEADER_FILES include/*.hpp)
+file(GLOB ALL_HEADER_FILES include/Header.h)
 
 # Add the main target.
 add_executable(${PROJECT_NAME} ${ALL_SOURCE_FILES} ${ALL_HEADER_FILES})

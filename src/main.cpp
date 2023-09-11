@@ -1,42 +1,38 @@
 #include <SFML/Graphics.hpp>
 #include <filesystem>
-#include "Version.hpp"
+//#include "Version.hpp"
+#include <Header.h>
 
 static void modifyCurrentWorkingDirectory();
 
 int main()
 {
     modifyCurrentWorkingDirectory();
-    auto title = "Template-" + GetTemplateVersion() + "/SFML-" + GetSFMLVersion();
-    sf::RenderWindow window(sf::VideoMode(640, 360), title, sf::Style::Close);
 
-    sf::Texture texture;
-    sf::Sprite sprite;
+    Render Field;
+    Builder Matrix;
 
-    if (texture.loadFromFile("resources/sfml-project-template.png"))
-    {
-        sprite.setTexture(texture);
-        sprite.setOrigin({(float)texture.getSize().x / 2, (float)texture.getSize().y / 2});
-        sprite.setPosition((float)window.getSize().x / 2, (float)window.getSize().y / 2);
-    }
+    Matrix.FixField();
+
+    //Window settings
+    sf::RenderWindow window;
+    window.create(sf::VideoMode(1440, 900), "Three in row");
+    window.setFramerateLimit(FPS);
 
     while (window.isOpen())
     {
-        sf::Event event;
-        while (window.pollEvent(event))
-        {
-            if (event.type == sf::Event::Closed)
-            {
-                window.close();
-            }
-        }
+        //Main Menu
+        MainMenu(&Matrix, &Field, &window);
 
-        window.clear();
-        window.draw(sprite);
-        window.display();
+        //main game
+        GameProcess(&Matrix, &Field, &window);
+
+        //End
+         DeathScreen(&Matrix, &Field, &window);
     }
 
     return 0;
+
 }
 
 void modifyCurrentWorkingDirectory()

@@ -1,0 +1,128 @@
+{
+	"archive" : {},
+	"artifacts" : 
+	[
+		{
+			"path" : "vendors/sfml/lib/libsfml-main-d.a"
+		}
+	],
+	"backtrace" : 2,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"sfml_add_library",
+			"install",
+			"target_include_directories"
+		],
+		"files" : 
+		[
+			"vendors/sfml/cmake/Macros.cmake",
+			"vendors/sfml/src/SFML/Main/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 17,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 44,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 161,
+				"parent" : 1
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 168,
+				"parent" : 1
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g -fdiagnostics-color=always"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 4,
+					"path" : "D:/JetBrains/CLionProjects/newtest/vendors/sfml/include"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "D:/JetBrains/CLionProjects/newtest/vendors/sfml/src"
+				}
+			],
+			"language" : "CXX",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"folder" : 
+	{
+		"name" : "SFML"
+	},
+	"id" : "sfml-main::@62532a292f69008c36dc",
+	"install" : 
+	{
+		"destinations" : 
+		[
+			{
+				"backtrace" : 3,
+				"path" : "lib"
+			}
+		],
+		"prefix" : 
+		{
+			"path" : "C:/Program Files (x86)/sfml-project"
+		}
+	},
+	"name" : "sfml-main",
+	"nameOnDisk" : "libsfml-main-d.a",
+	"paths" : 
+	{
+		"build" : "vendors/sfml/src/SFML/Main",
+		"source" : "vendors/sfml/src/SFML/Main"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "vendors/sfml/src/SFML/Main/MainWin32.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "STATIC_LIBRARY"
+}
